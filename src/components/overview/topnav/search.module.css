@@ -1,0 +1,17 @@
+.search {
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    margin-left: 0;
+    width: 100%;
+}
+.searchField {
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #afaeae;
+    padding: 15px;
+}
+.searchField:focus {
+    outline: none !important;
+    border-bottom: 1px solid #2600f5;
+}

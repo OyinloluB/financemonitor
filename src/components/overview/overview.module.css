@@ -1,0 +1,16 @@
+.overviewMain {
+    overflow: auto;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.sidenav {
+    background-color: #e3a23c;
+    height: 100vh;
+    flex: 0.2;
+}
+.overviewMain {
+    flex: 1;
+    padding: 30px 60px 30px 60px;
+}

@@ -1,0 +1,18 @@
+.chart {
+    width: 500px;
+}
+.chartItem {
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow:  6px 6px 10px #f7f7f7, 
+                 -6px -6px 10px #ffffff;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.chartContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
