@@ -9,7 +9,7 @@ const Navigation = () => {
         <h4>Overview</h4>
       </div>
       <div className={Styles.user}>
-        <p
+        <div
           style={{
             fontSize: "14px",
             display: "flex",
@@ -28,8 +28,8 @@ const Navigation = () => {
               textTransform: "lowercase",
             }}
           />
-          &nbsp; Jane Doe
-        </p>
+          <p>&nbsp; Jane Doe</p>
+        </div>
       </div>
     </div>
   );
