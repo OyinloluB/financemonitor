@@ -20,7 +20,9 @@ const Chart = () => {
       <div className={Styles.chart}>
         <Doughnut data={data} />
       </div>
-      <ChartList />
+      <div style={{ flex: 1 }}>
+        <ChartList />
+      </div>
     </div>
   );
 };

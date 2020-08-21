@@ -1,5 +1,5 @@
 .chart {
-    width: 500px;
+    flex: 1;
 }
 .chartItem {
     border-radius: 8px;
@@ -15,4 +15,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+.chartContainer {
+    flex-direction: column;
+}
+.chartItem {
+    width: 300px;
+}
+.chart {
+    width: 300px;
+}
 }

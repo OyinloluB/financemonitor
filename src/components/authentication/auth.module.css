@@ -49,9 +49,25 @@ input {
 .buttonContainer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 .button {
     width: 180px;
     height: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    .formContainer {
+        padding: 30px;
+    }
+    .inputField {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .blankSide {
+        display: none;
+    }
 }
