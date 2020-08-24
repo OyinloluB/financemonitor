@@ -7,20 +7,22 @@ import Chart from "./chart/Chart";
 
 const OverviewPage = () => {
   return (
-    <div className={Styles.overviewContainer}>
-      <div className={Styles.container}>
-        <div className={Styles.sidenav}>
-          <SideNav />
-        </div>
-        <div className={Styles.overviewMain}>
-          <Navigation />
-          <ExpensesContainer />
-          <div>
-            <Chart />
+    <>
+      <div className={Styles.overviewContainer}>
+        <div className={Styles.container}>
+          <div className={Styles.sidenav}>
+            <SideNav />
+          </div>
+          <div className={Styles.overviewMain}>
+            <Navigation />
+            <ExpensesContainer />
+            <div>
+              <Chart />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

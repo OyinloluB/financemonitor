@@ -7,13 +7,23 @@
     box-shadow:  6px 6px 10px #f7f7f7, 
                  -6px -6px 10px #ffffff;
     width: 400px;
-    height: 50px;
+    height: 40px;
     margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .chartContainer {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font-size: 14px;
+    color: #afaeae;
+    display: flex;
     align-items: center;
 }
 
@@ -25,6 +35,6 @@
     width: 300px;
 }
 .chart {
-    width: 300px;
+    display: none;
 }
 }

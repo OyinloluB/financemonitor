@@ -13,42 +13,42 @@ const initialState = {
       item: "Food",
       icon: <FastfoodIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
-      amount: 0.00,
+      amount: 0.0,
       id: 0,
     },
     {
       item: "Internet",
       icon: <PortableWifiOffIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
-      amount: 0.00,
+      amount: 0.0,
       id: 1,
     },
     {
       item: "Repairs",
       icon: <SettingsIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
-      amount: 0.00,
+      amount: 0.0,
       id: 2,
     },
     {
       item: "Housing",
       icon: <HouseIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
-      amount: 0.00,
+      amount: 0.0,
       id: 3,
     },
     {
       item: "Electronics",
       icon: <PhoneAndroidIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
-      amount: 0.00,
+      amount: 0.0,
       id: 4,
     },
     {
       item: "Clothing",
       icon: <AccessibilityIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
-      amount: 0.00,
+      amount: 0.0,
       id: 5,
     },
   ],
@@ -66,8 +66,19 @@ const expenseReducer = (state = initialState, action) => {
     case expenseUserTypes.REGISTER_EXPENSE_SUCCESS:
       return {
         ...state,
+        expenses: [
+          ...state.expenses.map((expense, index) => {
+            if (expense.id === action.payload.id) {
+              return {
+                ...expense,
+                amount: action.payload.amount,
+                date: action.payload.date,
+              };
+            }
+            return expense;
+          }),
+        ],
         loading: false,
-        user: [...action.payload],
         error: null,
       };
     case expenseUserTypes.REGISTER_EXPENSE_FAILURE:

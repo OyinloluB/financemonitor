@@ -4,9 +4,13 @@ export const registerExpenseStart = () => ({
   type: expenseUserTypes.REGISTER_EXPENSE_START,
 });
 
-export const registerExpenseSuccess = (expense) => ({
+export const registerExpenseSuccess = (expense, id) => ({
   type: expenseUserTypes.REGISTER_EXPENSE_SUCCESS,
-  payload: user,
+  payload: {
+    id: id,
+    date: expense.date,
+    amount: expense.amount,
+  },
 });
 
 export const registerExpenseFailure = (error) => ({
@@ -14,12 +18,12 @@ export const registerExpenseFailure = (error) => ({
   payload: error,
 });
 
-export const registerExpense = (expense) => {
+export const registerExpense = (expense, id) => {
   return (dispatch) => {
-    return new Promise(async (resolve, reject) => {
+    return new Promise(async (reject) => {
       dispatch(registerExpenseStart());
       try {
-        dispatch(registerExpenseSuccess(expense));
+        dispatch(registerExpenseSuccess(expense, id));
       } catch (error) {
         dispatch(registerExpenseFailure(error));
         reject(error);

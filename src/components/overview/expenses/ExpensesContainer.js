@@ -1,10 +1,10 @@
 import React from "react";
 import Expense from "./Expense";
 
-const ExpensesContainer = () => {
+const ExpensesContainer = ({ showModal, setShowModal }) => {
   return (
     <div>
-      <Expense />
+      <Expense showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 };
