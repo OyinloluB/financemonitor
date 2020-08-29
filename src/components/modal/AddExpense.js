@@ -6,7 +6,7 @@ import Styles from "./modal.module.css";
 const AddExpense = ({ id, setShowModal }) => {
   const [expense, setExpense] = useState({
     date: "",
-    amount: "",
+    amount: 0
   });
 
   const { date, amount } = expense;
@@ -18,18 +18,20 @@ const AddExpense = ({ id, setShowModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(id);
     dispatch(registerExpense(expense, id));
+    setShowModal(false);
   };
 
   return (
     <div className={Styles.backdrop}>
       <div className={Styles.modal}>
         <form onSubmit={handleSubmit} className={Styles.form}>
-          <input type="date" name="date" value={date} onChange={handleChange} />
+          <input type="date" name="date" defaultValue={date} onChange={handleChange} />
           <input
             type="number"
             name="amount"
-            value={amount}
+            defaultValue={amount}
             placeholder="Amount Spent"
             onChange={handleChange}
           />

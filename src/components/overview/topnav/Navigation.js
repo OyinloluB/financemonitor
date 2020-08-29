@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Avatar } from "@material-ui/core";
 import Styles from "./nav.module.css";
 
 const Navigation = () => {
+  const user = useSelector((state) => state.auth.user);
+
   return (
     <div className={Styles.container}>
       <div className={Styles.pageTitle}>
@@ -19,7 +22,7 @@ const Navigation = () => {
           }}
         >
           <Avatar
-            alt="Jane Doe"
+            alt={user.firstname}
             src="/static/images/avatar/1.jpg"
             style={{
               width: "28px",
@@ -28,7 +31,7 @@ const Navigation = () => {
               textTransform: "lowercase",
             }}
           />
-          <p>&nbsp; Jane Doe</p>
+          <p>&nbsp; {user.firstname}</p>
         </div>
       </div>
     </div>

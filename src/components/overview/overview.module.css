@@ -9,6 +9,7 @@
     background-color: #e3a23c;
     height: 100vh;
     flex: 0.2;
+    display: none;
 }
 .overviewMain {
     flex: 1;
@@ -20,12 +21,12 @@
         display: none;
     }
     .overviewMain {
-        padding: 30px 100px 30px 100px;
+        padding: 30px 80px 30px 80px;
     }
 }
 
 @media screen and (max-width: 420px){
     .overviewMain {
-        padding: 30px 60px 30px 60px;
+        padding: 30px 20px 30px 20px;
     }
 }

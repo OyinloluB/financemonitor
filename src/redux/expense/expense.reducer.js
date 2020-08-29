@@ -1,52 +1,39 @@
-import React from "react";
 import expenseUserTypes from "./expense.types";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import PortableWifiOffIcon from "@material-ui/icons/PortableWifiOff";
-import SettingsIcon from "@material-ui/icons/Settings";
-import HouseIcon from "@material-ui/icons/House";
-import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
-import AccessibilityIcon from "@material-ui/icons/Accessibility";
 
 const initialState = {
   expenses: [
     {
       item: "Food",
-      icon: <FastfoodIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
       amount: 0.0,
       id: 0,
     },
     {
       item: "Internet",
-      icon: <PortableWifiOffIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
       amount: 0.0,
       id: 1,
     },
     {
       item: "Repairs",
-      icon: <SettingsIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
       amount: 0.0,
       id: 2,
     },
     {
       item: "Housing",
-      icon: <HouseIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
       amount: 0.0,
       id: 3,
     },
     {
       item: "Electronics",
-      icon: <PhoneAndroidIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
       amount: 0.0,
       id: 4,
     },
     {
       item: "Clothing",
-      icon: <AccessibilityIcon style={{ fontSize: 18, color: "grey" }} />,
       date: "",
       amount: 0.0,
       id: 5,
@@ -67,7 +54,7 @@ const expenseReducer = (state = initialState, action) => {
       return {
         ...state,
         expenses: [
-          ...state.expenses.map((expense, index) => {
+          ...state.expenses.map((expense) => {
             if (expense.id === action.payload.id) {
               return {
                 ...expense,

@@ -8,7 +8,7 @@ import expenseReducer from "./expense/expense.reducer";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth"],
+  whitelist: ["auth", "expense"],
 };
 
 const rootReducer = combineReducers({

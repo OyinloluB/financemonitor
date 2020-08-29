@@ -23,6 +23,7 @@ export const registerExpense = (expense, id) => {
     return new Promise(async (reject) => {
       dispatch(registerExpenseStart());
       try {
+        console.log(id);
         dispatch(registerExpenseSuccess(expense, id));
       } catch (error) {
         dispatch(registerExpenseFailure(error));

@@ -1,13 +1,14 @@
 import React from "react";
+import Styles from "./sidenav.module.css";
 
 const SideNav = () => {
   return (
-    <div>
-      {/* <ul>
-        <li>Overview</li>
-        <li>Profile</li>
+    <div className={Styles.container}>
+      <ul>
+        <li>Github</li>
+        <li>Twitter</li>
         <li>LogOut</li>
-      </ul> */}
+      </ul>
     </div>
   );
 };

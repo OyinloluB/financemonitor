@@ -31,3 +31,9 @@ export const registerUser = (user) => {
     });
   };
 };
+
+export const logOut = (user) => {
+  return (dispatch) => {
+    dispatch(logUserOut(user));
+  };
+};
